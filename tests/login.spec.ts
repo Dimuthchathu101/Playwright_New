@@ -19,5 +19,18 @@ describe('Launch Browser', () => {
 
         // Final - Close the browser
         await browser.close();
+
+        // User name
+        await page.fill("","")
+
+        // Password
+        await page.waitForTimeout(5000);
+
+        const newContext = await browser.newContext()
+        // New Tab
+        const page1 = await context.newPage()
+        await page1.goto("link")
+
+        await page.waitForTimeout(5000);
     });
 });
