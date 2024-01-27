@@ -1,4 +1,4 @@
-const { test } = require ("@playwright/test");
+import {test} from "@playwright/test"
 
 test('Handling Frames', async ({ page }) => { 
     await page.goto("https://letcode.in/frame");
@@ -24,6 +24,3 @@ test('Handling Frames', async ({ page }) => {
 
     // await page.waitForTimeout(3000);
 });
-
-
- // 02:10: 00
